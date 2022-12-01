@@ -61,6 +61,22 @@
     padding: 0;
 }
 
+.fixed-nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 40px;
+    padding: 0 25px;
+    box-sizing: border-box;
+    background-color: hsl(var(--hue), var(--sat), var(--lig));
+    box-shadow: 0 0 15px 2px rgba(0,0,0,0.5);
+    z-index: 100;
+    backface-visibility: hidden;
+    transition: 0.35s ease;
+}
+
+
 body{
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
@@ -87,98 +103,6 @@ img{
     height: auto;
 }
 
-/* ================= LAB ======================= */
-.lab__text{
-    /* font-family: 'Roboto Mono', monospace; */
-    font-weight: 100;
-    font-size: 28px;
-    color: var(--text-color);
-}
-.dud{
-    color: #757575;
-}
-
-/* THEME */
-.change-theme{
-    position: absolute;
-    top: 1.5rem;
-    right: 0;
-    font-size: 1.25rem;
-    color: var(--title-color);
-    cursor: pointer;
-    transition: .3;
-}
-
-.change-theme:hover{
-    color: var(--first-color);
-}
-
-/* Variables Dark Theme */
-body.dark-theme{
-    --title-color: hsl(12, 48%, 94%);
-    --text-color: hsl(12, 48%, 94%);
-    --body-color: hsl(270, 6%, 7%);
-    --container-color: #121212;
-}
-
-/* 
-    El color cambia en algunas partes
-    del website, el el tema light
-*/
-
-.dark-theme .lab__text{
-    color: hsl(270, 6%, 75%);
-}
-.dark-theme .button__gray {
-    background-color: hsl(270, 6%, 11%);
-    /* border: 1px solid #F7EBE8; */
-}
-
-.dark-theme .button__gray:hover {
-    background-color: hsl(270, 6%, 16%);
-    color: var(--first-color);
-}
-
-.dark-theme .filters__content{
-    background-color: hsl(270, 6%, 11%);
-}
-
-.dark-theme .filters__button{
-    color:hsl(12, 48%, 94%);
-}
-
-.dark-theme .filters__button:hover{
-    background-color: hsl(270, 6%, 18%);;
-    color: var(--first-color);
-}
-
-.dark-theme .filter-tab-active {
-    background-color:hsl(270, 6%, 15%);;
-    color: var(--first-color);
-}
-
-.dark-theme .profile__social i{
-    color: hsl(270, 6%, 75%);
-}
-
-.dark-theme .profile__social i:hover{
-    color: var(--first-color);
-}
-
-.dark-theme .profile__profession{
-    color: var(--first-color);
-    text-shadow: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), .25);
-}
-
-.dark-theme .profile__profession:hover{
-    color: var(--first-color-alt);
-}
-
-/* .dark-theme .skills__area{
-    background-color: hsl(270, 6%, 11%);
-    border-radius: 5%;
-    margin: .5rem;
-} */
 @keyframes float {
 	0% {
 		box-shadow: 0 5px 15px 0px hsla(var(--hue), var(--sat), var(--lig), .2);
@@ -192,23 +116,6 @@ body.dark-theme{
 		box-shadow: 0 5px 15px 0px hsla(var(--hue), var(--sat), var(--lig), .2);
 		transform: translatey(0px);
 	}
-}
-
-.dark-theme .projects__card{
-    /* box-shadow: 0 8px 24px hsla(var(--hue), var(--sat), var(--lig), .35); */
-    animation: float 6s ease-in-out infinite;
-}
-
-.dark-theme::-webkit-scrollbar {
-    background-color: hsl(270, 6%, 16%);
-}
-
-.dark-theme::-webkit-scrollbar-thumb {
-    background-color: hsl(270, 6%, 24%);
-}
-
-.dark-theme::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(270, 6%, 32%);
 }
 
 /* REUSABLE CSS CLASSES */
